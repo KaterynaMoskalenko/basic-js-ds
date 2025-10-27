@@ -1,4 +1,5 @@
 const { BinarySearchTree } = require('./binary-search-tree.js');
+const { Queue } = require('./queue.js');
 
 const tree = new BinarySearchTree();
 tree.add(10);
@@ -7,18 +8,18 @@ tree.add(15);
 tree.add(1);
 tree.add(25);
 
-console.log(tree.has(1))
-console.log(tree.has(5))
+// console.log(tree.has(1))
+// console.log(tree.has(5))
 
 //console.log(tree.find(25))
-console.log('Root:', tree.root());
+// console.log('Root:', tree.root());
 
-console.log(tree.remove(15));
+// console.log(tree.remove(15));
 
-console.log('Root:', tree.root());
+// console.log('Root:', tree.root());
 
-console.log(tree.min())
-console.log(tree.max())
+// console.log(tree.min())
+// console.log(tree.max())
 
 /*
 this.rootNode = {
@@ -130,3 +131,38 @@ current.left = current.left.left;
 
 
 
+/// LinkedList
+
+const list = new Queue();
+
+console.log(list.enqueue(1));
+list.enqueue(3);
+list.enqueue(5);
+console.log('Root:', list.getUnderlyingList());
+list.insert(1,7);
+console.log('Root:', list.getUnderlyingList());
+list.dequeue(1);
+console.log('Root:', list.getUnderlyingList());
+list.dequeue(3);
+console.log('Root:', list.getUnderlyingList());
+
+
+/*
+this.head = {
+  value: 1,
+  next: {
+    value: 3,
+    next: {
+      value: 5,
+      next: null
+    }
+  }
+}
+  Root: ListNode {
+  value: 1,
+  next: ListNode {
+    value: 3,
+    next: null
+  }
+}
+  */
