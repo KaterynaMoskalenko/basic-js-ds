@@ -17,6 +17,9 @@ console.log(tree.remove(15));
 
 console.log('Root:', tree.root());
 
+console.log(tree.min())
+console.log(tree.max())
+
 /*
 this.rootNode = {
   data: 10,
