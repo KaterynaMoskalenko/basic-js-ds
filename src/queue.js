@@ -21,7 +21,14 @@ class Queue {
   
   getUnderlyingList() {
     // Remove line below and write your code here
-    return this.head;
+    function toPlain(node) {
+      if (!node) return null;
+      return {
+        value: node.value,
+        next: toPlain(node.next)
+      };
+    }
+    return toPlain(this.head);
   }
 
   enqueue(value) {
@@ -39,7 +46,7 @@ class Queue {
 
   dequeue() {
     // Remove line below and write your code here
-    if (!this.head) return null; // there is noth;
+    if (!this.head) return undefined; // there is noth;
     const removeVal = this.head.value
     this.head = this.head.next;
     this.length--;

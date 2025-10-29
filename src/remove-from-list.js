@@ -34,9 +34,8 @@ function removeKFromList(l, k) {
         // move on
         current = current.next;
     }
-}
-
-  
+  }
+  return l;  
 }
 
 module.exports = {
