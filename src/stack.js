@@ -19,7 +19,7 @@ class Stack {
   
   push(value) {
     // Remove line below and write your code here
-    this._item.push(value);
+    this._items.push(value);
   }
 
   pop() {
